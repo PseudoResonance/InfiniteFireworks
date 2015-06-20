@@ -1,0 +1,2 @@
+# InfiniteFireworks
+InfiniteFireworks Plugin
