@@ -8,6 +8,7 @@ import org.bukkit.block.Dispenser;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Firework;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.block.BlockDispenseEvent;
@@ -38,7 +39,7 @@ public class InfiniteFireworks extends JavaPlugin implements Listener {
 	}
 	
 	@SuppressWarnings("deprecation")
-	@EventHandler
+	@EventHandler(priority = EventPriority.HIGHEST)
 	public void onDispenser(BlockDispenseEvent e) {
 		Block b = e.getBlock();
 		if (b.getType() == Material.DISPENSER && e.getItem().getType() == Material.FIREWORK) {
